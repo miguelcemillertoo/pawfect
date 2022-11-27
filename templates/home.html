@@ -1,0 +1,77 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+<div class="container home-container" style="background-image: url(/static/images/assets/background.jpg)"
+    data="{{username}}">
+
+    <div class="side-nav-container slide-out hidden">
+        <div class="back-button side-nav-back-button">
+            <img src="/static/images/assets/arrow.svg">
+        </div>
+
+        <div class="side-nav-header">
+            <img class="profile-image-container side-nav-image-container"
+                src="/static/images/user-images/{{user.image_filename}}" draggable="false">
+            <div class="profile-name-address-container side-nav-profile-name-address-container">
+                <div>{{user.name}}</div>
+                <div>{{user.address}}</div>
+            </div>
+        </div>
+
+        <div class="side-nav-menu-container">
+            <div>My Profile</div>
+            <div>My Paws</div>
+            <div>Favorite</div>
+            <div>Messages</div>
+            <div id="log-out-js">Log Out</div>
+        </div>
+    </div>
+
+
+    <div class="header header-home">
+        <div class="menu-button menu-button-js">
+            <img src="/static/images/assets/menu.svg">
+        </div>
+
+        <div class="profile-header">
+            <div class="profile-name-address-container">
+                <div>{{user.name}}</div>
+                <div>{{user.address}}</div>
+            </div>
+            <img class="profile-image-container" src="/static/images/user-images/{{user.image_filename}}"
+                draggable="false">
+        </div>
+    </div>
+
+    <input class="text-input-search" type="text" placeholder="Search">
+
+    <div class="feed-container">
+        {% for pet in pets %}
+        <a href="/pet-view/{{pet.name}}/{{username}}">
+            <div class="feed-dog-container">
+                <div class="feed-dog-image-container">
+                    <img src="/static/images/pet-images/{{pet.image_filename}}" draggable="false">
+                </div>
+
+                <div class="feed-dog-info-container">
+                    <div>{{pet.name}}</div>
+                    <div>{{pet.breed}}</div>
+                    <div>Info</div>
+                </div>
+
+                <div class="feed-heart-container">
+                    <img src="/static/images/assets/heart.svg" draggable="false">
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<script src="/static/js/home.js"></script>
+
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+<div class="container dog-view-container" style="background-image: url(/static/images/assets/background.jpg)">
+    <a href="/home/{{username}}">
+        <div class="back-button dog-view-back-button">
+            <img src="/static/images/assets/arrow.svg">
+        </div>
+    </a>
+
+    <div class="dog-view-image-container">
+        <img src="/static/images/pet-images/{{pet.image_filename}}" draggable="false">
+    </div>
+
+    <div class="dog-view-info-container">
+        <div>Name: <span>{{pet.name}}</span></div>
+        <div>Breed: <span>{{pet.breed}}</span></div>
+        <div>Gender: <span>{{pet.gender}}</span></div>
+        <div>Age: <span>{{pet.birthday}}</span></div>
+        <div>Address: <span>{{user.address}}</span></div>
+        <div>Owner's Name: <span>{{pet.owner}}</span></div>
+    </div>
+
+    <button class="primary-button full-width-button">Match</button>
+
+</div>
+
+<script src="/static/js/pet-view.js"></script>
+
+
+{% endblock content %}

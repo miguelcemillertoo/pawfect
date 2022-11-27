@@ -1,0 +1,57 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+<div class="container relative" style="background-image: url(/static/images/assets/background.jpg)">
+
+    <div class="header relative">
+        <div class="back-button">
+            <img src="/static/images/assets/arrow.svg">
+        </div>
+
+        <div class="header-text">Sign Up</div>
+    </div>
+
+    <div class="image-upload-container relative" onclick="document.getElementById('upload-image-js').click()">
+        <div>Photo</div>
+        <img id='photo-container-js' class="hidden" src="">
+        <input id="upload-image-js" type="file" name="image" accept="image/*" style="display: none">
+    </div>
+
+    <div class="text-inputs-container">
+        <div class="text-input-container">
+            <div class="text-input-name">Name</div>
+            <input id="name-input-js" class="text-input-field" type="text" onkeyup="checkData()">
+        </div>
+        <div class="text-input-container">
+            <div class="text-input-name">Username</div>
+            <input id="username-input-js" class="text-input-field" type="text" onkeyup="checkData()">
+        </div>
+        <div class="text-input-container">
+            <div class="text-input-name">Password</div>
+            <input id='password-input-js' class="text-input-field" type="password" onkeyup="checkData()">
+        </div>
+        <div class="text-input-container">
+            <div class="text-input-name">Address</div>
+            <input id='address-input-js' class="text-input-field" type="text" onkeyup="checkData()">
+        </div>
+    </div>
+
+
+    <div class="pet-profile-options hidden">
+        <button id='create-pet-profile-js' class="primary-button full-width-button">Create Pet Profile</button>
+        <button id="skip-js" class="primary-button full-width-button">Skip</button>
+    </div>
+
+
+    <div class="footer">
+        <button id='sign-up-button-js' class="primary-button full-width-button disabled">Sign Up</button>
+    </div>
+
+
+</div>
+
+<script src="/static/js/sign-up.js"></script>
+
+
+{% endblock content %}
