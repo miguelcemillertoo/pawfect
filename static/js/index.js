@@ -400,8 +400,8 @@ const checkIfActivateHeart = async () => {
 
     const folder = breedA + "-" + inputColorA.toLowerCase() + "-" + breedB + "-" + inputColorB.toLowerCase();
     const folderAlt = breedB + "-" + inputColorB.toLowerCase() + "-" + breedA + "-" + inputColorA.toLowerCase();
-    // console.log("Offsprings folder: ", folder);
-    // console.log("Offsprings folder alt: ", folderAlt);
+    console.log("Offsprings folder: ", folder);
+    console.log("Offsprings folder alt: ", folderAlt);
 
     // Retrieve offsprings images from folder / folderAlt
     let offspringsImagesPaths = [];
@@ -412,7 +412,7 @@ const checkIfActivateHeart = async () => {
       .then((data) => {
         offspringsImagesPaths = data.offspringsFilepaths;
       });
-    // console.log(offspringsImagesPaths);
+    console.log(offspringsImagesPaths);
 
     // If no images
     if (offspringsImagesPaths.length == 0) {
@@ -420,6 +420,8 @@ const checkIfActivateHeart = async () => {
       document.querySelectorAll(".offspring-image-container").forEach((el) => el.remove());
       document.querySelector(".no-offsprings-message").classList.remove("hidden");
     } else {
+      // remove images
+      document.querySelectorAll(".offspring-image-container").forEach((el) => el.remove());
       // If there are images, show
       document.querySelector(".no-offsprings-message").classList.add("hidden");
       offspringsImagesPaths.forEach((imagePath) => {
