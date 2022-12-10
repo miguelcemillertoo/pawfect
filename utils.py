@@ -14,7 +14,7 @@ USER_IMAGES_PATH = join(dirname(realpath(__file__)), 'static/images/user-images'
 PET_IMAGES_PATH = join(dirname(realpath(__file__)), 'static/images/pet-images')
 TEMP_PATH = join(dirname(realpath(__file__)), 'static/images/temp')
 
-BREEDS = ['American Bully', 'Belgian Malinois', 'Chihuahua', 'Chow Chow', 'Dachshund', 'German Shepherd', 'Golden Retriever', 'Husky', 'Poodle', 'Shih-Tzu', 'Shih-Tzu x Aspin', 'Shih-Tzu x Pomeranian', 'Shih-Tzu x Poodle', 'Labrador Retriever x Golden Retriever', 'Belgian Malinois x Labrador Retriever']
+BREEDS = ['American Bully', 'Belgian Malinois', 'Belgian Malinois x Labrador Retriever', 'Chihuahua', 'Chow Chow', 'Dachshund', 'German Shepherd', 'Golden Retriever', 'Husky', 'Labrador Retriever x Golden Retriever', 'Poodle', 'Shih-Tzu', 'Shih-Tzu x Aspin', 'Shih-Tzu x Pomeranian', 'Shih-Tzu x Poodle']
 
 COLORS = ['Black', 'Black-Tan', 'Cream', 'Dark Golden', 'Fawn', 'Tan', 'White']
 
