@@ -1,0 +1,77 @@
+[
+    {
+        "breed": "American Bully",
+        "height": "16-20 in",
+        "weight": "60-120 lbs"
+    },
+    {
+        "breed": "Belgian Malinois",
+        "height": "22-26 in",
+        "weight": "40-80 lbs"
+    },
+    {
+        "breed": "Chihuahua",
+        "height": "6-10 in",
+        "weight": "2-6 lbs"
+    },
+    {
+        "breed": "Chow Chow",
+        "height": "17-20 in",
+        "weight": "40-70 lbs"
+    },
+    {
+        "breed": "Dachshund",
+        "height": "8-9 in",
+        "weight": "16-32 lbs"
+    },
+    {
+        "breed": "German Shepherd",
+        "height": "22-26 in",
+        "weight": "50-90 lbs"
+    },
+    {
+        "breed": "Golden Retriever",
+        "height": "21-24 in",
+        "weight": "55-75 lbs"
+    },
+    {
+        "breed": "Husky",
+        "height": "20-23 in",
+        "weight": "35-60 lbs"
+    },
+    {
+        "breed": "Poodle",
+        "height": "10-11 in / 15-22 in",
+        "weight": "4-6 lbs / 40-70 lbs"
+    },
+    {
+        "breed": "Shih-Tzu",
+        "height": "8-11 in",
+        "weight": "9-16 lbs"
+    },
+    {
+        "breed": "Shih-Tzu x Aspin",
+        "height": "9-12 in",
+        "weight": "8-13 lbs"
+    },
+    {
+        "breed": "Shih-Tzu x Pomeranian",
+        "height": "7-10 in",
+        "weight": "4-13 lbs"
+    },
+    {
+        "breed": "Shih-Tzu x Poodle",
+        "height": "8-18 in",
+        "weight": "7-20 lbs"
+    },
+    {
+        "breed": "Labrador Retriever x Golden Retriever",
+        "height": "21-25 in",
+        "weight": "55-85 lbs"
+    },
+    {
+        "breed": "Belgian Malinois x Labrador Retriever",
+        "height": "22-25 in",
+        "weight": "60-80 lbs"
+    }
+]

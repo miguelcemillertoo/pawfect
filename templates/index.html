@@ -1,0 +1,166 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="modal-offspring-container hidden">
+    <div class="modal-offspring-content">
+        <div class="modal-image-container">
+            <img src="" />
+        </div>
+    </div>
+</div>
+
+<div class="modal-gallery-camera-container hidden">
+    <div class="modal-gallery-camera-content">
+        <div class="modal-options-container">
+            <div id="camera-option">Camera</div>
+            <div id="gallery-option">Gallery</div>
+        </div>
+    </div>
+</div>
+
+<div class="navbar">
+    <img src="/static/images/assets/logo-alt.png" draggable="false">
+</div>
+
+<div class="container container-gutter">
+    <div class="dog-upload-containers">
+        <div class="dog-upload-container">
+            <div class="image-upload-divider-container">
+                <div id='image-upload-container-A' class="image-upload-container">
+                    <img class='image-placeholder a' src="/static/images/assets/placeholder.svg" draggable="false">
+                    <img class="image-upload a hidden" src="" draggable="false">
+                </div>
+                <div class="image-upload-loader a hidden"></div>
+                <input id="gallery-upload-A" type="file" name="image" accept="image/*" style="display: none" />
+                <input id="camera-upload-A" type="file" name="image" accept="image/*" capture="capture"
+                    style="display: none" />
+
+                <div class="divider"></div>
+            </div>
+
+            <div class="input-containers">
+                <div class="input-container">
+                    <div class="input-label">Breed:</div>
+                    <select id='select-breed-a-js' class="input-disabled opaque" required>
+                        <option value="American Bully">American Bully</option>
+                        <option value="Belgian Malinois">Belgian Malinois</option>
+                        <option value="Chihuahua">Chihuahua</option>
+                        <option value="Chow Chow">Chow Chow</option>
+                        <option value="Dachshund">Dachshund</option>
+                        <option value="German Shepherd">German Shepherd</option>
+                        <option value="Golden Retriever">Golden Retriever</option>
+                        <option value="Husky">Husky</option>
+                        <option value="Poodle">Poodle</option>
+                        <option value="Shih-Tzu">Shih-Tzu</option>
+                        <option value="Shih-Tzu x Aspin">Shih-Tzu x Aspin</option>
+                        <option value="Shih-Tzu x Pomeranian">Shih-Tzu x Pomeranian</option>
+                        <option value="Shih-Tzu x Poodle">Shih-Tzu x Poodle</option>
+                        <option value="Labrador Retriever x Golden Retriever">Labrador Retriever x Golden Retriever
+                        </option>
+                        <option value="Belgian Malinois x Labrador Retriever">Belgian Malinois x Labrador Retriever
+                        </option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <div class="input-label">Color:</div>
+                    <input id='input-color-a-js' class="input-disabled opaque" type="text"
+                        onkeyup="checkIfActivateHeart()">
+                </div>
+                <div class="input-container">
+                    <div class="input-label">Type:</div>
+                    <input id='input-type-a-js' class="input-disabled opaque" type="text">
+                </div>
+                <div class="input-container">
+                    <div class="input-label">Height:</div>
+                    <input id='input-height-a-js' class='input-disabled' type="text">
+                </div>
+                <div class="input-container">
+                    <div class="input-label">Weight:</div>
+                    <input id='input-weight-a-js' class='input-disabled' type="text">
+                </div>
+            </div>
+
+            <div class="error-message a hidden"></div>
+        </div>
+
+
+        <div class="heart-container">
+            <img src="/static/images/assets/heart.svg" draggable="false">
+        </div>
+
+        <div class="dog-upload-container">
+            <div class="image-upload-divider-container">
+                <div id='image-upload-container-B' class="image-upload-container">
+                    <img class='image-placeholder b' src="/static/images/assets/placeholder.svg" draggable="false">
+                    <img class="image-upload b hidden" src="" draggable="false">
+                </div>
+                <div class="image-upload-loader b hidden"></div>
+                <input id="gallery-upload-B" type="file" name="image" accept="image/*" style="display: none" />
+                <input id="camera-upload-B" type="file" name="image" accept="image/*" capture="capture"
+                    style="display: none" />
+
+                <div class="divider"></div>
+            </div>
+
+            <div class="input-containers">
+                <div class="input-container">
+                    <div class="input-label">Breed:</div>
+                    <select id='select-breed-b-js' class='input-disabled opaque' required>
+                        <option value="American Bully">American Bully</option>
+                        <option value="Belgian Malinois">Belgian Malinois</option>
+                        <option value="Chihuahua">Chihuahua</option>
+                        <option value="Chow Chow">Chow Chow</option>
+                        <option value="Dachshund">Dachshund</option>
+                        <option value="German Shepherd">German Shepherd</option>
+                        <option value="Golden Retriever">Golden Retriever</option>
+                        <option value="Husky">Husky</option>
+                        <option value="Poodle">Poodle</option>
+                        <option value="Shih-Tzu">Shih-Tzu</option>
+                        <option value="Shih-Tzu x Aspin">Shih-Tzu x Aspin</option>
+                        <option value="Shih-Tzu x Pomeranian">Shih-Tzu x Pomeranian</option>
+                        <option value="Shih-Tzu x Poodle">Shih-Tzu x Poodle</option>
+                        <option value="Labrador Retriever x Golden Retriever">Labrador Retriever x Golden Retriever
+                        </option>
+                        <option value="Belgian Malinois x Labrador Retriever">Belgian Malinois x Labrador Retriever
+                        </option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <div class="input-label">Color:</div>
+                    <input id='input-color-b-js' class="input-disabled opaque" type="text" type="text"
+                        onkeyup="checkIfActivateHeart()">
+                </div>
+                <div class="input-container">
+                    <div class="input-label">Type:</div>
+                    <input id='input-type-b-js' class="input-disabled opaque" type="text" type="text">
+                </div>
+                <div class="input-container">
+                    <div class="input-label">Height:</div>
+                    <input id='input-height-b-js' class="input-disabled opaque" type="text">
+                </div>
+                <div class="input-container">
+                    <div class="input-label">Weight:</div>
+                    <input id='input-weight-b-js' class="input-disabled opaque" type="text">
+                </div>
+            </div>
+
+            <div class="error-message b hidden"></div>
+        </div>
+
+
+    </div>
+
+    <div class="offsprings-container">
+        <!-- <div class="offspring-image-container">
+            <img src="https://www.hospitalveterinariglories.com/wp-content/uploads/2022/01/26-01-22-American-Bully-conoce-esta-raza-de-perro-.jpg"
+                draggable="false">
+        </div> -->
+        <div class="no-offsprings-message">No offspring images available</div>
+    </div>
+
+</div>
+
+<script src="/static/js/index.js"></script>
+
+
+{% endblock content %}
